@@ -11,7 +11,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder,
 /**
  * @author
  */
-class massergI18NDoctrineExtension extends Extension
+class massergI18nDoctrineExtension extends Extension
 {
     /**
      *

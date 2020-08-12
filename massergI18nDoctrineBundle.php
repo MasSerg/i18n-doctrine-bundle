@@ -8,7 +8,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle,
 /**
  * @author
  */
-class massergI18NDoctrineBundle extends Bundle
+class massergI18nDoctrineBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {
