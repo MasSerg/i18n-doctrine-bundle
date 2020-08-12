@@ -1,0 +1,33 @@
+{
+    "name": "masserg/i18n-doctrine-bundle",
+    "type": "symfony-bundle",
+    "description": "Manage i18n for your doctrine objects",
+    "keywords": ["symfony2", "doctrine2", "i18n", "internationalization", "translation", "translatable"],
+    "homepage": "https://github.com/masserg/I18nDoctrineBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "masserg",
+            "homepage": "https://github.com/masserg/I18nDoctrineBundle"
+        },
+        {
+            "name": "MasSerg"
+        }
+    ],
+    "require": {
+        "symfony/http-kernel": "^4.0|^5.0",
+        "symfony/validator": "^4.0|^5.0",
+        "symfony/config": "^4.0|^5.0",
+        "symfony/dependency-injection": "^4.0|^5.0",
+        "a2lix/translation-form-bundle": "*"
+    },
+    "autoload": {
+        "psr-0": {"masserg\\I18nDoctrineBundle": ""}
+    },
+    "target-dir": "masserg/I18nDoctrineBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1"
+        }
+    }
+}

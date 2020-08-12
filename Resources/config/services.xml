@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="masserg_i18n_doctrine.listener.doctrine.class" />
+        <parameter key="masserg_i18n_doctrine.listener.controller.class" />
+
+        <parameter key="masserg_i18n_doctrine.translatableTrait" />
+        <parameter key="masserg_i18n_doctrine.translationTrait" />
+        <parameter key="masserg_i18n_doctrine.translatableFetchMode" />
+        <parameter key="masserg_i18n_doctrine.translationFetchMode" />
+        <parameter key="masserg_i18n_doctrine.isRecursive" />
+    </parameters>
+
+    <services>
+        <service id="masserg_i18n_doctrine.listener.doctrine" class="%masserg_i18n_doctrine.listener.doctrine.class%">
+            <argument>%masserg_i18n_doctrine.translatableTrait%</argument>
+            <argument>%masserg_i18n_doctrine.translationTrait%</argument>
+            <argument>%masserg_i18n_doctrine.translatableFetchMode%</argument>
+            <argument>%masserg_i18n_doctrine.translationFetchMode%</argument>
+            <argument>%masserg_i18n_doctrine.isRecursive%</argument>
+            <tag name="doctrine.event_subscriber" />
+        </service>
+        <service id="masserg_i18n_doctrine.listener.controller" class="%masserg_i18n_doctrine.listener.controller.class%">
+            <argument type="service" id="annotation_reader" />
+            <argument type="service" id="masserg_i18n_doctrine.object_manager" />
+            <tag name="kernel.event_listener" event="kernel.controller" method="onKernelController" />
+        </service>
+    </services>
+</container>
