@@ -2,7 +2,7 @@
     "name": "masserg/i18n-doctrine-bundle",
     "type": "symfony-bundle",
     "description": "Manage i18n for your doctrine objects",
-    "keywords": ["symfony2", "doctrine2", "i18n", "internationalization", "translation", "translatable"],
+    "keywords": ["symfony4", "doctrine2", "i18n", "internationalization", "translation", "translatable"],
     "homepage": "https://github.com/masserg/I18nDoctrineBundle",
     "license": "MIT",
     "authors": [
